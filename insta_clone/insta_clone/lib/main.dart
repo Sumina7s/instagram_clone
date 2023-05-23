@@ -6,10 +6,12 @@ import 'package:insta_clone/responsive/responsive_layout_screen.dart';
 import 'package:insta_clone/responsive/web_screen_layout.dart';
 import 'package:insta_clone/screens/login_screen.dart';
 import 'package:insta_clone/utils/colors.dart';
+import 'package:insta_clone/screens/signup_screen.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
-  if(kIsWeb) {
+   // initialise app based on platform- web or mobile
+   if(kIsWeb) {
     await Firebase.initializeApp(
       options:  const FirebaseOptions(
        apiKey: 'AIzaSyBwFOteNrpA2KFadejNeuWsezCzi40652o',
@@ -26,20 +28,23 @@ void main() async{
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+   
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Instagram Clone', 
+      title: 'Instagram Clone',
       theme: ThemeData.dark(),
      // home: const ResponssiveLayout(
        // mobileScreenLayout: MobileScreenLayout(),
       // webScreenLayout: WebScreenLayout(),
        //),
        home: LoginScreen(),
+      
+       
     );
   }
 }

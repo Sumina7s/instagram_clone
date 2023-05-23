@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:insta_clone/resources/auth_methods.dart';
 import 'package:insta_clone/utils/colors.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:insta_clone/widgets/text_field_input.dart';
- 
+
  class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
