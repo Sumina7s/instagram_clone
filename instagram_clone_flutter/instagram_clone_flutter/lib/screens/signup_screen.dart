@@ -95,7 +95,11 @@ class _SignupScreenState extends State<SignupScreen> {
                 child: Container(),
                 flex: 2,
               ),
-              Image(image: AssetImage("assets/images/image.png")),
+              Image.asset(
+               'assets/images/iinsta.png',
+                height: 400,
+                width: 300,
+                ),
               const SizedBox(
                 height: 64,
               ),
