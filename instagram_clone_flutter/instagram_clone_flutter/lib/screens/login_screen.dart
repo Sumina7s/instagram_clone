@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-//import 'package:instagram_clone_flutter/resources/auth_methods.dart';
+import 'package:project/screens/signup_screen.dart';
 import 'package:project/responsive/mobile_screen_layout.dart';
 import 'package:project/responsive/web_screen_layout.dart';
 //import 'package:project/responsive/responsive_layout.dart';
@@ -11,6 +10,8 @@ import 'package:project/utils/global_variable.dart';
 import 'package:project/utils/utils.dart';
 import 'package:project/resources/auth_methods.dart';
 import 'package:project/widgets/text_field_input.dart';
+
+import '../responsive/responsive_layout.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -40,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
     if (res == 'success') {
       Navigator.of(context).pushAndRemoveUntil(
           MaterialPageRoute(
-            builder: (context) => const ResponsiveLayout(
+          builder: (context) => const ResponsiveLayout(
               mobileScreenLayout: MobileScreenLayout(),
              webScreenLayout: WebScreenLayout(),
             ),
@@ -50,7 +51,8 @@ class _LoginScreenState extends State<LoginScreen> {
       setState(() {
        _isLoading = false;
       });
-    } else {
+    } 
+   else {
       setState(() {
         _isLoading = false;
       });

@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:project/responsive/web_screen_layout.dart';
 import 'package:project/utils/colors.dart';
 import 'package:project/utils/global_variable.dart';
 
-class WebScreenLayout extends StatefulWidget {
-  const WebScreenLayout({Key? key}) : super(key: key);
+class ResponsiveLayout extends StatefulWidget {
+  final Widget mobileScreenLayout;
+  final Widget webScreenLayout;
+  const ResponsiveLayout({
+    Key? key,
+    required this.mobileScreenLayout,
+    required this.webScreenLayout,
+  }) : super(key: key);
+
+//class WebScreenLayout extends StatefulWidget {
+  //const WebScreenLayout({Key? key}) : super(key: key);
 
   @override
   State<WebScreenLayout> createState() => _WebScreenLayoutState();
