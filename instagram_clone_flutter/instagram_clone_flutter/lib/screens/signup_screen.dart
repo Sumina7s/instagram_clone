@@ -11,11 +11,6 @@ import 'package:project/utils/colors.dart';
 import 'package:project/utils/global_variable.dart';
 import 'package:project/utils/utils.dart';
 import 'package:project/widgets/text_field_input.dart';
-import 'package:project/resources/auth_methods.dart';
-import 'package:project/screens/login_screen.dart';
-import 'package:project/utils/colors.dart';
-import 'package:project/utils/utils.dart';
-import 'package:project/widgets/text_field_input.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({Key? key}) : super(key: key);
@@ -99,11 +94,11 @@ class _SignupScreenState extends State<SignupScreen> {
                 child: Container(),
                 flex: 2,
               ),
-              SvgPicture.asset(
-                'assets/ic_instagram.svg',
-                color: primaryColor,
-                height: 64,
-              ),
+             Image.asset(
+               'assets/images/iinsta.png',
+                height: 400,
+                width: 300,
+                ),
               const SizedBox(
                 height: 64,
               ),
